@@ -1,0 +1,108 @@
+i) using System;
+
+class CalculatorApp
+{
+    static void Main()
+    {
+        int a = 10, b = 5;
+
+        Console.WriteLine("Total apples: " + (a + b));
+        Console.WriteLine("Difference of pencils: " + (a - b));
+        Console.WriteLine("Total pages when 10 pages are copied 5 times: " + (a * b));
+        Console.WriteLine("Chocolates per kid: " + (a / b));
+        Console.WriteLine("Leftover candies: " + (a % b));
+    }
+}
+ii) compare players scores 
+using System;
+
+class PlayerScore
+{
+    static void Main()
+    {
+        int playerA = 20;
+        int playerB = 15;
+
+        Console.WriteLine("Player A scored more than B: " + (playerA > playerB));
+        Console.WriteLine("Scores are equal: " + (playerA == playerB));
+        Console.WriteLine("Player A failed to beat B: " + (playerA <= playerB));
+    }
+}
+iii) login system with local opertors
+using System;
+
+class LoginSystem
+{
+    static void Main()
+    {
+        string username = "admin";
+        string password = "1234";
+
+        Console.Write("Enter username: ");
+        string inputUser = Console.ReadLine();
+        Console.Write("Enter password: ");
+        string inputPass = Console.ReadLine();
+
+        bool isUsernameValid = inputUser == username;
+        bool isPasswordValid = inputPass == password;
+
+        // AND
+        if (isUsernameValid && isPasswordValid)
+            Console.WriteLine("Access Granted");
+        else
+            Console.WriteLine("Access Denied");
+
+        // OR
+        Console.WriteLine("Either username or password correct: " + (isUsernameValid || isPasswordValid));
+
+        // NOT
+        Console.WriteLine("Opposite of username validity: " + (!isUsernameValid));
+    }
+
+iv) Quiz Points System
+using System;
+
+class QuizGame
+{
+    static void Main()
+    {
+        int score = 50;
+        Console.WriteLine("Start Score: " + score);
+
+        // Correct Answer
+        score += 10;
+        Console.WriteLine("After correct answer: " + score);
+
+        // Wrong Answer
+        score -= 5;
+        Console.WriteLine("After wrong answer: " + score);
+
+        // Bonus round
+        score *= 2;
+        Console.WriteLine("After bonus round: " + score);
+
+        // Penalty
+        score /= 5;
+        Console.WriteLine("After penalty: " + score);
+    }
+}
+v) Voting Eligibility Check for 5 People
+using System;
+
+class VotingEligibility
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write("Enter age of person " + i + ": ");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age >= 18)
+                Console.WriteLine("Eligible to Vote");
+            else
+                Console.WriteLine("Not Eligible");
+        }
+    }
+}
+
